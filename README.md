@@ -8,7 +8,6 @@ Requires [Smoke-js](https://github.com/smokenetwork/) libraries.
 $ git clone https://github.com/bitcoinparadise/Smoke_Witness_Notify
 $ cd Smoke_Witness_Notify
 $ npm install 
-$ npm audit fix
 ```
 
 ### Install Smoke-js
@@ -18,7 +17,6 @@ $ cd ~/Smoke_Witness_Notify/node_modules/
 $ git clone https://github.com/smokenetwork/smoke-js.git
 $ cd smoke-js
 $ npm install
-$ npm audit fix
 $ cd ~/Smoke_Witness_Notify
 ```
 
