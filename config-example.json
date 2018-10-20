@@ -1,0 +1,9 @@
+{
+  "rpc_nodes": [
+    "https://rpc.smoke.io",
+    "ADDITIONAL_NODE_URL"
+  ],
+  "accountname": "USERNAME",
+  "discorduser": "DISCORD_USER_ID",
+  "token": "BOT_TOKEN",
+}
