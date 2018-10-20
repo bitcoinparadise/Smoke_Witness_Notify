@@ -43,7 +43,7 @@ Then set the following options in config.json:
 ## Run
 
 ```
-nodejs witness_notify.js
+node witness_notify.js
 ```
 <br>
 
