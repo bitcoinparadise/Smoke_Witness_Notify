@@ -45,3 +45,6 @@ Then set the following options in config.json:
 ```
 nodejs witness_notify.js
 ```
+<br>
+
+Based on @markptrueman's [witness_monitor_tutorial](https://github.com/markptrueman/witness_monitor_tutorial)
