@@ -1,6 +1,6 @@
 # Smoke Witness Notify - Discord Bot
 
-Requires Smoke-js
+Requires [Smoke-js](https://github.com/smokenetwork/) libraries.
 
 ## Installation
 
