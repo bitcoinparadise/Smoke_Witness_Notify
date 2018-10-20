@@ -1,4 +1,4 @@
-# Smoke_Witness_Notify_Discord
+# Smoke Witness Notify Discord
 
 Requires Smoke-js
 
