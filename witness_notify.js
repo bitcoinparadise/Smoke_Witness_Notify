@@ -9,8 +9,8 @@ let missedCount = -1;
 // Load the settings from the config file
 loadConfig();
 
-  // Connect to the specified RPC node
-  rpc_node = config.rpc_nodes ? config.rpc_nodes[0] : (config.rpc_node ? config.rpc_node : 'https://rpc.smoke.io');
+// Connect to the specified RPC node
+rpc_node = config.rpc_nodes ? config.rpc_nodes[0] : (config.rpc_node ? config.rpc_node : 'https://rpc.smoke.io');
 
 // create a new bot instance
 let bot = new discord.Client({
@@ -146,7 +146,7 @@ function failover() {
   }
 }
 
-
+//beta testing node fail-over feature
 var error_count = 0;
 function logError(message) {
   // Don't count assert exceptions for node failover
