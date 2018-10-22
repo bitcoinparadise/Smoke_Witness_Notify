@@ -13,7 +13,7 @@ $ npm install
 ### Install Smoke-js
 
 ```
-$ cd ~/Smoke_Witness_Notify/node_modules/
+$ cd node_modules
 $ git clone https://github.com/smokenetwork/smoke-js.git
 $ cd smoke-js
 $ npm install
