@@ -36,7 +36,7 @@ Then set the following options in config.json:
 {
   "rpc_nodes": [
     "https://rpc.smoke.io",  // Set the list of RPC nodes you would like to connect to (https://rpc.smoke.io is the default if this is not set). The software will automatically fail over to the next node on the list if the current one is having issues.
-    "ADDITIONA_NODE_URL"
+    "ADDITIONAL_NODE_URL"
   ],
   "accountname": "USERNAME",
   "discorduser": "DISCORD_USER_ID",
