@@ -8,7 +8,7 @@ The instructions will install the notification bot and [Smoke-js](https://github
 
 * First create a Discord bot account, get the bot token for later and continue with the installation.
 
-Guide on how to create a Discord bot https://discordpy.readthedocs.io/en/rewrite/discord.html
+Guide on how to create a Discord bot: https://discordpy.readthedocs.io/en/rewrite/discord.html
 
 ## Installation
 
@@ -31,6 +31,7 @@ $ mv config-example.json config.json
 ```
 
 Then set the following options in config.json:
+
 ```
 {
   "rpc_nodes": [
