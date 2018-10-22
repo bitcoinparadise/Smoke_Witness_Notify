@@ -2,7 +2,7 @@ Requires [Node.js](https://github.com/nodejs/node) libraries and a Discord bot a
 
 # Smoke Witness Notify - Discord Bot
 
-*Discord bot to notify Smoke Witness of missed blocks.*
+#### Discord bot to notify Smoke Witness of missed blocks.
 
 The instructions will install the notification bot and [Smoke-js](https://github.com/smokenetwork/) libariries.
 
