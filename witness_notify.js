@@ -125,6 +125,7 @@ function loadConfig() {
   config = JSON.parse(fs.readFileSync("config.json"));
 }
 
+//alpha testing node fail-over feature
 function failover() {
   if(config.rpc_nodes && config.rpc_nodes.length > 1) {
     // Give it a minute after the failover to account for more errors coming in from the original node
@@ -137,7 +138,7 @@ function failover() {
 
     rpc_node = config.rpc_nodes[cur_node_index];
 
-    client = new dsteem.Client(rpc_node);
+    client = new steem.Client(rpc_node);
     utils.log('');
     utils.log('***********************************************');
     utils.log('Failing over to: ' + rpc_node);
@@ -146,7 +147,6 @@ function failover() {
   }
 }
 
-//beta testing node fail-over feature
 var error_count = 0;
 function logError(message) {
   // Don't count assert exceptions for node failover
