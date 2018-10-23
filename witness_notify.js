@@ -25,7 +25,7 @@ bot.on('ready', function() {
     // send a message to a user id when you are ready
     bot.sendMessage({
         to: config.discorduser,
-        message: moment().utc().format("YYYY-MM-DD HH:mm:ss") + " : Witness Monitor Bot Starting....."
+        message: moment().utc().format("YYYY-MM-DD HH:mm:ss") + " : Witness Notify Bot Starting....."
     });
 
 });
