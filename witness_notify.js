@@ -3,8 +3,8 @@ var fs = require("fs");
 var steem = require('smoke-js');
 var discord = require('discord.io');
 var moment = require('moment');
-let missedCount = -1;
 var config = require('./config.json');
+let missedCount = -1;
 
 function startup() {
 // Load the settings from the config file
