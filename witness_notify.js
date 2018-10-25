@@ -1,16 +1,19 @@
 // import required libraries.
-const fs = require("fs");
-const steem = require('smoke-js')
-const discord = require('discord.io')
-const moment = require('moment')
-var rpc_node = null;
+var fs = require("fs");
+var steem = require('smoke-js');
+var discord = require('discord.io');
+var moment = require('moment');
 let missedCount = -1;
+var config = require('./config.json');
 
+function startup() {
 // Load the settings from the config file
 loadConfig();
 
 // Connect to the specified RPC node
 rpc_node = config.rpc_nodes ? config.rpc_nodes[0] : (config.rpc_node ? config.rpc_node : 'https://rpc.smoke.io');
+steem.api.setOptions({ url: rpc_node});
+}
 
 // create a new bot instance
 let bot = new discord.Client({
@@ -120,51 +123,5 @@ let start = async() => {
 let timeout = (sec) => {
     return new Promise(resolve => setTimeout(resolve, sec * 1000))
 }
-
-function loadConfig() {
-  config = JSON.parse(fs.readFileSync("config.json"));
-}
-
-//alpha testing node fail-over feature
-function failover() {
-  if(config.rpc_nodes && config.rpc_nodes.length > 1) {
-    // Give it a minute after the failover to account for more errors coming in from the original node
-    setTimeout(function() { error_count = 0; }, 60 * 1000);
-
-    var cur_node_index = config.rpc_nodes.indexOf(rpc_node) + 1;
-
-    if(cur_node_index == config.rpc_nodes.length)
-      cur_node_index = 0;
-
-    rpc_node = config.rpc_nodes[cur_node_index];
-
-    client = new steem.Client(rpc_node);
-    utils.log('');
-    utils.log('***********************************************');
-    utils.log('Failing over to: ' + rpc_node);
-    utils.log('***********************************************');
-    utils.log('');
-  }
-}
-
-var error_count = 0;
-function logError(message) {
-  // Don't count assert exceptions for node failover
-  if (message.indexOf('assert_exception') < 0 && message.indexOf('ERR_ASSERTION') < 0)
-    error_count++;
-
-  utils.log('Error Count: ' + error_count + ', Current node: ' + rpc_node);
-  utils.log(message);
-}
-
-// Check if 10+ errors have happened in a 3-minute period and fail over to next rpc node
-function checkErrors() {
-  if(error_count >= 10)
-    failover();
-
-  // Reset the error counter
-  error_count = 0;
-}
-setInterval(checkErrors, 3 * 60 * 1000);
 
 start();
