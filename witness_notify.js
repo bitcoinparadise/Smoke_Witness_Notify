@@ -10,7 +10,7 @@ function startup() {
 // Load the settings from the config file
 loadConfig();
 
-// Connect to the specified RPC node
+// Connect to the specified RPC node (Default: https://rpc.smoke.io)
 rpc_node = config.rpc_nodes ? config.rpc_nodes[0] : (config.rpc_node ? config.rpc_node : 'https://rpc.smoke.io');
 steem.api.setOptions({ url: rpc_node});
 }
