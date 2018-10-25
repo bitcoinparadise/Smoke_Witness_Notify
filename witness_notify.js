@@ -15,6 +15,22 @@ rpc_node = config.rpc_nodes ? config.rpc_nodes[0] : (config.rpc_node ? config.rp
 steem.api.setOptions({ url: rpc_node});
 }
 
+// used for re-trying failed promises
+function delay(t) {
+    return new Promise((r_resolve) => {
+        setTimeout(r_resolve, t);
+    });
+}
+
+// Attempts = how many times to allow an RPC problem before giving up
+// Delay = how long before a retry
+var retry_conf = {
+    feed_attempts: 10,
+    feed_delay: 60,
+    login_attempts: 6,
+    login_delay: 10
+}
+
 // create a new bot instance
 let bot = new discord.Client({
     token: config.token,
