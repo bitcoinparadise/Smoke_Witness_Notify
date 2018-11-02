@@ -81,7 +81,7 @@ let start = async() => {
                     missedCount = witness.total_missed;
                     bot.sendMessage({
                         to: config.discorduser,
-                        message: moment().utc().format("YYYY-MM-DD HH:mm:ss") +  " : " + "`@" + config.accountname + "`" + " __Initial Missed Block Count__ = " + "**" + missedCount
+                        message: moment().utc().format("YYYY-MM-DD HH:mm:ss") +  " : " + "`@" + config.accountname + "`" + " __Initial Missed Block Count__ = " + "**" + missedCount + "**"
                     });
                     console.log("Initial Missed Block count = " + missedCount)
 
