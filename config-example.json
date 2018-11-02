@@ -5,5 +5,5 @@
   ],
   "accountname": "USERNAME",
   "discorduser": "DISCORD_USER_ID",
-  "token": "BOT_TOKEN",
+  "token": "BOT_TOKEN"
 }
