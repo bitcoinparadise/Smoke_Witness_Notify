@@ -40,7 +40,7 @@ Then set the following options in config.json:
   ],
   "accountname": "USERNAME",
   "discorduser": "DISCORD_USER_ID",
-  "token": "BOT_TOKEN",
+  "token": "BOT_TOKEN"
 }
 ```
 
