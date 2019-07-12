@@ -1,6 +1,6 @@
 // import required libraries.
 var fs = require("fs");
-var steem = require('smoke-js');
+var steem = require('steem');
 var discord = require('discord.io');
 var moment = require('moment');
 var config = require('./config.json');
