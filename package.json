@@ -12,6 +12,6 @@
     "discord.io": "github:woor/discord.io#gateway_v6",
     "moment": "^2.22.2",
     "steem": "^0.7.1",
-    "lodash": "4.17.14"
+    "lodash": "4.17.19"
   }
 }
